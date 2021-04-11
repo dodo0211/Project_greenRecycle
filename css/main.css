@@ -1,0 +1,39 @@
+* {
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+nav > ul {
+  display: flex;
+  padding: 0;
+  justify-content: space-around;
+  list-style: none;
+}
+
+main {
+  display: flex;
+}
+
+main > span {
+  flex-grow: 4;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+section > span {
+  width: 20%;
+  margin: 5px;
+}
+
+main > aside {
+  flex-grow: 1;
+}
