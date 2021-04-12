@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css?after1">
+    <link rel="stylesheet" href="./css/main.css?after3">
     <title>초록리싸이클</title>
 </head>
 <body>
@@ -16,11 +16,10 @@
         <?php include "./common/lib/header.php";?>
     </header>
 
-    <div>
-        <section>이미지 슬라이드</section>            
-    </div>
-
     <nav>
+        <div>
+            <section>이미지 슬라이드</section>            
+        </div>
         <ul>
             <li>가정용</li>
             <li>사무용</li>

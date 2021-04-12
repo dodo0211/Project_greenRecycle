@@ -1,6 +1,6 @@
 * {
-  /* outline: 1px solid red; */
-  /* outline-offset: -1px; */
+  outline: 1px solid red;
+  outline-offset: -1px;
 }
 
 body {
@@ -8,7 +8,6 @@ body {
   margin: 0;
 }
 
-header,
 body > div,
 nav,
 main,
@@ -28,9 +27,24 @@ img {
 
 nav > ul {
   display: flex;
+  /* padding: 5px 0; */
+  margin: 0;
   padding: 0;
   justify-content: space-around;
   list-style: none;
+  background: rgb(90, 240, 53);
+}
+
+nav > ul > li {
+  font-size: 0.6em;
+  width: 100%;
+  height: 100%;
+  padding: 5px 0;
+  text-align: center;
+}
+
+nav > ul > li:hover {
+  background: rgb(129, 253, 97);
 }
 
 main {
@@ -56,9 +70,9 @@ main > aside {
 
 header {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   border-bottom: 1px solid grey;
-  padding: 5px 0px;
+  padding: 5px 50px;
   font-size: 1.5em;
 }
 
