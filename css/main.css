@@ -1,11 +1,29 @@
 * {
-  outline: 1px solid red;
-  outline-offset: -1px;
+  /* outline: 1px solid red; */
+  /* outline-offset: -1px; */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header,
+body > div,
+nav,
+main,
+footer {
+  padding: 0 50px;
 }
 
 p {
   margin: 0;
   padding: 0;
+}
+
+img {
+  max-width: 100px;
+  width: 100%;
 }
 
 nav > ul {
@@ -26,14 +44,24 @@ main > span {
 section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 section > span {
-  width: 20%;
   margin: 5px;
 }
 
 main > aside {
+  flex-grow: 1;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid grey;
+  padding: 5px 0px;
+  font-size: 1.5em;
+}
+
+header span {
   flex-grow: 1;
 }

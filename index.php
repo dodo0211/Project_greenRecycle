@@ -8,11 +8,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.css?after1">
     <title>초록리싸이클</title>
 </head>
 <body>
-    <header>초록리싸이클</header>
+    <header>
+        <?php include "./common/lib/header.php";?>
+    </header>
 
     <div>
         <section>이미지 슬라이드</section>            
@@ -34,88 +36,88 @@
         <span>
             <section>
                 <span>
-                    <p>사진</p>
+                    <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MTBfNzEg/MDAxNjE4MDE2MDQ0NzQz.q7Rikz21f2brwe2ZeXQNQYX06uUUKkCGVjBRhclqeU8g.5FsXa2hbzlDK9ZEmJdSuxL8WsOfnqzhpZZyHRjMICVYg.JPEG/151155795_1_1617955616_w1100.jpg?type=w1600"/>
                     <p>제품명</p>
                     <p>가격</p>
                 </span>
                 <span>
-                    <p>사진</p>
+                    <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MTBfNzEg/MDAxNjE4MDE2MDQ0NzQz.q7Rikz21f2brwe2ZeXQNQYX06uUUKkCGVjBRhclqeU8g.5FsXa2hbzlDK9ZEmJdSuxL8WsOfnqzhpZZyHRjMICVYg.JPEG/151155795_1_1617955616_w1100.jpg?type=w1600"/>
                     <p>제품명</p>
                     <p>가격</p>
                 </span>
                 <span>
-                    <p>사진</p>
+                    <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MTBfNzEg/MDAxNjE4MDE2MDQ0NzQz.q7Rikz21f2brwe2ZeXQNQYX06uUUKkCGVjBRhclqeU8g.5FsXa2hbzlDK9ZEmJdSuxL8WsOfnqzhpZZyHRjMICVYg.JPEG/151155795_1_1617955616_w1100.jpg?type=w1600"/>
                     <p>제품명</p>
                     <p>가격</p>
                 </span>
                 <span>
-                    <p>사진</p>
+                    <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MTBfNzEg/MDAxNjE4MDE2MDQ0NzQz.q7Rikz21f2brwe2ZeXQNQYX06uUUKkCGVjBRhclqeU8g.5FsXa2hbzlDK9ZEmJdSuxL8WsOfnqzhpZZyHRjMICVYg.JPEG/151155795_1_1617955616_w1100.jpg?type=w1600"/>
                     <p>제품명</p>
                     <p>가격</p>
                 </span>                
             </section>
             <section>
                 <span>
-                    <p>사진</p>
+                    <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MTBfNzEg/MDAxNjE4MDE2MDQ0NzQz.q7Rikz21f2brwe2ZeXQNQYX06uUUKkCGVjBRhclqeU8g.5FsXa2hbzlDK9ZEmJdSuxL8WsOfnqzhpZZyHRjMICVYg.JPEG/151155795_1_1617955616_w1100.jpg?type=w1600"/>
                     <p>제품명</p>
                     <p>가격</p>
                 </span>
                 <span>
-                    <p>사진</p>
+                    <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MTBfNzEg/MDAxNjE4MDE2MDQ0NzQz.q7Rikz21f2brwe2ZeXQNQYX06uUUKkCGVjBRhclqeU8g.5FsXa2hbzlDK9ZEmJdSuxL8WsOfnqzhpZZyHRjMICVYg.JPEG/151155795_1_1617955616_w1100.jpg?type=w1600"/>
                     <p>제품명</p>
                     <p>가격</p>
                 </span>
                 <span>
-                    <p>사진</p>
+                    <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MTBfNzEg/MDAxNjE4MDE2MDQ0NzQz.q7Rikz21f2brwe2ZeXQNQYX06uUUKkCGVjBRhclqeU8g.5FsXa2hbzlDK9ZEmJdSuxL8WsOfnqzhpZZyHRjMICVYg.JPEG/151155795_1_1617955616_w1100.jpg?type=w1600"/>
                     <p>제품명</p>
                     <p>가격</p>
                 </span>
                 <span>
-                    <p>사진</p>
+                    <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MTBfNzEg/MDAxNjE4MDE2MDQ0NzQz.q7Rikz21f2brwe2ZeXQNQYX06uUUKkCGVjBRhclqeU8g.5FsXa2hbzlDK9ZEmJdSuxL8WsOfnqzhpZZyHRjMICVYg.JPEG/151155795_1_1617955616_w1100.jpg?type=w1600"/>
                     <p>제품명</p>
                     <p>가격</p>
                 </span>                
             </section>
             <section>
                 <span>
-                    <p>사진</p>
+                    <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MTBfNzEg/MDAxNjE4MDE2MDQ0NzQz.q7Rikz21f2brwe2ZeXQNQYX06uUUKkCGVjBRhclqeU8g.5FsXa2hbzlDK9ZEmJdSuxL8WsOfnqzhpZZyHRjMICVYg.JPEG/151155795_1_1617955616_w1100.jpg?type=w1600"/>
                     <p>제품명</p>
                     <p>가격</p>
                 </span>
                 <span>
-                    <p>사진</p>
+                    <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MTBfNzEg/MDAxNjE4MDE2MDQ0NzQz.q7Rikz21f2brwe2ZeXQNQYX06uUUKkCGVjBRhclqeU8g.5FsXa2hbzlDK9ZEmJdSuxL8WsOfnqzhpZZyHRjMICVYg.JPEG/151155795_1_1617955616_w1100.jpg?type=w1600"/>
                     <p>제품명</p>
                     <p>가격</p>
                 </span>
                 <span>
-                    <p>사진</p>
+                    <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MTBfNzEg/MDAxNjE4MDE2MDQ0NzQz.q7Rikz21f2brwe2ZeXQNQYX06uUUKkCGVjBRhclqeU8g.5FsXa2hbzlDK9ZEmJdSuxL8WsOfnqzhpZZyHRjMICVYg.JPEG/151155795_1_1617955616_w1100.jpg?type=w1600"/>
                     <p>제품명</p>
                     <p>가격</p>
                 </span>
                 <span>
-                    <p>사진</p>
+                    <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MTBfNzEg/MDAxNjE4MDE2MDQ0NzQz.q7Rikz21f2brwe2ZeXQNQYX06uUUKkCGVjBRhclqeU8g.5FsXa2hbzlDK9ZEmJdSuxL8WsOfnqzhpZZyHRjMICVYg.JPEG/151155795_1_1617955616_w1100.jpg?type=w1600"/>
                     <p>제품명</p>
                     <p>가격</p>
                 </span>                
             </section>
             <section>
                 <span>
-                    <p>사진</p>
+                    <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MTBfNzEg/MDAxNjE4MDE2MDQ0NzQz.q7Rikz21f2brwe2ZeXQNQYX06uUUKkCGVjBRhclqeU8g.5FsXa2hbzlDK9ZEmJdSuxL8WsOfnqzhpZZyHRjMICVYg.JPEG/151155795_1_1617955616_w1100.jpg?type=w1600"/>
                     <p>제품명</p>
                     <p>가격</p>
                 </span>
                 <span>
-                    <p>사진</p>
+                    <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MTBfNzEg/MDAxNjE4MDE2MDQ0NzQz.q7Rikz21f2brwe2ZeXQNQYX06uUUKkCGVjBRhclqeU8g.5FsXa2hbzlDK9ZEmJdSuxL8WsOfnqzhpZZyHRjMICVYg.JPEG/151155795_1_1617955616_w1100.jpg?type=w1600"/>
                     <p>제품명</p>
                     <p>가격</p>
                 </span>
                 <span>
-                    <p>사진</p>
+                    <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MTBfNzEg/MDAxNjE4MDE2MDQ0NzQz.q7Rikz21f2brwe2ZeXQNQYX06uUUKkCGVjBRhclqeU8g.5FsXa2hbzlDK9ZEmJdSuxL8WsOfnqzhpZZyHRjMICVYg.JPEG/151155795_1_1617955616_w1100.jpg?type=w1600"/>
                     <p>제품명</p>
                     <p>가격</p>
                 </span>
                 <span>
-                    <p>사진</p>
+                    <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MTBfNzEg/MDAxNjE4MDE2MDQ0NzQz.q7Rikz21f2brwe2ZeXQNQYX06uUUKkCGVjBRhclqeU8g.5FsXa2hbzlDK9ZEmJdSuxL8WsOfnqzhpZZyHRjMICVYg.JPEG/151155795_1_1617955616_w1100.jpg?type=w1600"/>
                     <p>제품명</p>
                     <p>가격</p>
                 </span>                
