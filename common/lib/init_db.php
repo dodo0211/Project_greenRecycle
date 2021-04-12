@@ -8,7 +8,6 @@ include "./common/lib/init_db_insert.php";
 create_table($conn, MEMBER_TABLE);
 create_table($conn, PRODUCT_TABLE);
 create_table($conn, CART_TABLE);
-create_table($conn, PRODUCT_PHOTO_TABLE);
 
 insert_init_data($conn, MEMBER_TABLE);
 insert_init_data($conn, PRODUCT_TABLE);

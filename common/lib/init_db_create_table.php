@@ -37,13 +37,13 @@ function create_table($conn, $table_name){
                         `inventory` int not null,
                         `price` int not null,
                         `link` varchar(400) not null,
-                        `link_2` varchar(400) null,
-                        `link_3` varchar(400) null,
-                        `link_4` varchar(400) null,
-                        `link_5` varchar(400) null,
-                        `link_6` varchar(400) null,
-                        `link_7` varchar(400) null,
-                        `link_8` varchar(400) null,
+                        `link_2` varchar(400) null default null,
+                        `link_3` varchar(400) null default null,
+                        `link_4` varchar(400) null default null,
+                        `link_5` varchar(400) null default null,
+                        `link_6` varchar(400) null default null,
+                        `link_7` varchar(400) null default null,
+                        `link_8` varchar(400) null default null,
                         constraint `pk_product_category_name` primary key (`category`, `name`)
                     ) ENGINE = InnoDB DEFAULT CHARSET = utf8;";
             break;
@@ -55,8 +55,7 @@ function create_table($conn, $table_name){
                         `count` int not null,
                         constraint `pk_cart_member_id_product_category_name` primary key(`member_id`, `product_category`, `product_name`),
                         constraint `fk_cart_member_id` foreign key(`member_id`) references `member_table`(`id`) on delete cascade on update cascade,
-                        constraint `fk_cart_product_category` foreign key(`product_category`) references `product_table`(`category`) on delete cascade on update cascade,
-                        constraint `fk_cart_product_cname` foreign key(`product_name`) references `product_table`(`name`) on delete cascade on update cascade
+                        constraint `fk_cart_product_category_name` foreign key(`product_category`, `product_name`) references `product_table`(`category`, `name`) on delete cascade on update cascade
                     ) ENGINE = InnoDB DEFAULT CHARSET = utf8;";
             break;
       default:
