@@ -21,7 +21,8 @@ p {
 }
 
 img {
-  max-width: 100px;
+  min-width: 100px;
+  max-width: 150px;
   width: 100%;
 }
 
@@ -48,8 +49,11 @@ nav > ul > li:hover {
   background: rgb(129, 253, 97);
 }
 
+/* 
+  ul 왼쪽 패딩을 없애고 
+  dropdown menu가 parent width와 같도록 설정
+*/
 nav > ul > li > ul {
-  margin: 0;
   padding: 0;
   width: 100%;
 }
@@ -64,11 +68,12 @@ main > span {
 
 section {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 section > span {
   margin: 5px;
+  flex-basis: 25%;
 }
 
 main > aside {
