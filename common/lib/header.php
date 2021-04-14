@@ -1,10 +1,10 @@
 <span>
-    <div>
+    <a href="http://localhost/project_greenrecycle/">
         초록리사이클
-    </div>
-    <div>
+    </a>
+    <a href="https://cafe.naver.com/black8hal8" target="_blank">
         초록리사이클카페
-    </div>
+    </a>
 </span>
 <span>
     검색창

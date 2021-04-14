@@ -97,6 +97,10 @@ header span {
   flex-basis: 0;
 }
 
+header span a {
+  display: block;
+}
+
 body > nav .dropdown-content {
   width: 100%;
   display: none;
