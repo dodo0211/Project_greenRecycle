@@ -1,6 +1,7 @@
 * {
   outline: 1px solid red;
   outline-offset: -1px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 body {
@@ -33,7 +34,7 @@ nav > ul {
   padding: 0;
   justify-content: space-around;
   list-style: none;
-  background: rgb(90, 240, 53);
+  background: #00c853;
 }
 
 nav > ul > li {
