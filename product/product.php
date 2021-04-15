@@ -39,10 +39,10 @@
                     <!-- <div id="product_category">3</div> -->
                     <div id="product_inventory">갯수 : </div>
                     <div id="order_total">총 금액(수량) : </div>
-                    <div id="order_buttons">
-                        <button>구매하기</button>
-                        <button>장바구니</button>
-                        <!-- <button></button> -->
+                    <div id="order">
+                        <p>구입 문의는 다음 번호로</p>
+                        <p> 010 - xxxx - xxxx </p>
+                        <button>관심 상품 등록</button>
                     </div>
                 </span>
             </div>
