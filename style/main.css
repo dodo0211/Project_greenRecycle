@@ -139,11 +139,12 @@ main {
 main > span {
   flex-grow: 4;
   flex-basis: 0;
+  text-align: center;
 }
 
 main > span > section img {
-  min-width: 50px;
-  max-width: 300px;
+  min-width: 176px;
+  max-width: 233px;
   width: 100%;
 }
 
