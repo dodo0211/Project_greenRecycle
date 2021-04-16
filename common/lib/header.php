@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/init_db.php";
+?>
 <span>
     <a href="http://localhost/project_greenrecycle/">
         초록리사이클
