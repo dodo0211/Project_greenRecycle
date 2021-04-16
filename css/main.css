@@ -119,3 +119,24 @@ body > nav .dropdown-content a {
 body > nav > ul > li:hover .dropdown-content {
   display: block;
 }
+
+footer {
+  display: flex;
+}
+
+footer > span > div {
+  display: flex;
+  margin-right: 5px;
+}
+
+footer > span > div > div {
+  margin-right: 20px;
+}
+
+footer > span:first-child {
+  flex-grow: 6;
+}
+
+footer > span:nth-child(2) {
+  flex-grow: 2;
+}
