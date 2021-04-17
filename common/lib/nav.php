@@ -1,14 +1,9 @@
 <div>
-    <section>이미지 슬라이드</section>            
+    <section>
+        <!-- <img src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/image/slide_sample.jpg" alt="슬라이드 이미지"> -->
+    </section>            
 </div>
 <ul>
-    <li>
-        가정용
-        <ul class="dropdown-content">
-            <a href="#">가구</a>
-            <a href="#">가전</a>
-        </ul>
-    </li>
     <li>
         사무용
         <ul class="dropdown-content">
@@ -19,6 +14,13 @@
             <a href="#">금고</a>
             <a href="#">TV</a>
             <a href="#">모니터</a>
+        </ul>
+    </li>
+    <li>
+        가정용
+        <ul class="dropdown-content">
+            <a href="#">가구</a>
+            <a href="#">가전</a>
         </ul>
     </li>
     <li>
