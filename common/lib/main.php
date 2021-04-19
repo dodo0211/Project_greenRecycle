@@ -20,18 +20,22 @@
                             $name = $row["name"];
                             $category = $row["category"];
                             $id = $row["id"];
+                            ?>
+                            <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/product/product.php?id=<?php echo $id;?>&category=<?php echo $category;?>">
+                                <img src="<?php echo $link ?>"/>
+                            </a>
+                            <p><?php echo $name ?></p>
+                            <p><?php echo $price ?></p>
+                            <?php
                         } else {
-                            $price = "";
-                            $link = "";
-                            $name = "";
+                            ?>
+                            <a>
+                                <img style="opacity:0;">
+                            </a>
+                            <p></p>
+                            <p></p>
+                            <?php
                         }
-                        ?>
-                        <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/product/product.php?id=<?php echo $id;?>&category=<?php echo $category;?>">
-                            <img src="<?php echo $link ?>"/>
-                        </a>
-                        <p><?php echo $name ?></p>
-                        <p><?php echo $price ?></p>
-                        <?php
                     ?>
                     </span>
                     <?php

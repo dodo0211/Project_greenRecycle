@@ -1,0 +1,49 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main > h1 {
+  text-align: center;
+}
+
+main > div {
+  text-align: right;
+  padding-right: 10px;
+}
+
+main > ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid #aed581;
+  border-bottom: 1px solid #aed581;
+}
+
+main > ul > a {
+  cursor: pointer;
+}
+
+main > ul > a,
+main > ul > li {
+  padding: 10px 20px;
+  border-right: 1px solid #c5e1a5;
+}
+
+main > section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main > section > span {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  flex-basis: 20%;
+  text-align: center;
+}
+
+main > section > span > a > img {
+  width: 176px;
+  height: 176px;
+}
