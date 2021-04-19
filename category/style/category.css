@@ -20,11 +20,14 @@ main > ul {
   border-bottom: 1px solid #aed581;
 }
 
+main > ul > a {
+  cursor: pointer;
+}
+
 main > ul > a,
 main > ul > li {
   padding: 10px 20px;
   border-right: 1px solid #c5e1a5;
-  cursor: pointer;
 }
 
 main > section {
