@@ -67,6 +67,23 @@
   const SORT_DESC_DATE = 0;
   const SORT_ASC_PRICE = 1;
   const SORT_DESC_PRICE = 2;
+
+  function echo_divisions() {
+    global $division_array;
+    foreach (array_keys($division_array) as $first_division) {
+        foreach ($division_array[$first_division] as $second_division) {
+            if ($second_division == $_GET["category"]) {
+                $second_division_text = array_search($second_division, $division_array[$first_division]);
+                ?>
+                <div>
+                    <?php echo $first_division." > ".$second_division_text; ?>
+                </div>
+                <?php
+                break 2;
+            }
+        }
+    }
+  }
 ?>
 <span>
     <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/index.php">
