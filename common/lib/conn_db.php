@@ -3,9 +3,25 @@ date_default_timezone_set("Asia/seoul");
 
 define("DB_NAME", "green_recycle_db");
 
-$server_name = "localhost";
-$user_name = "root";
-$password = "123456";
+$file = fopen($_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/doc/db_conf.csv", "r");
+
+const HOST_INDEX = 0;
+const USER_INDEX = 1;
+const PASSWORD_INDEX = 2;
+
+$server_name = "";
+$user_name = "";
+$password = "";
+
+while(!feof($file)) {
+    $array = fgetcsv($file);
+
+    $server_name = $array[HOST_INDEX];
+    $user_name = $array[USER_INDEX];
+    $password = $array[PASSWORD_INDEX];
+}
+
+fclose($file);
 
 $db_flag = false;
 
