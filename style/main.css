@@ -1,6 +1,6 @@
 * {
-  /* outline: 1px solid red;
-  outline-offset: -1px; */
+  outline: 1px solid red;
+  outline-offset: -1px;
   font-family: "Noto Sans KR", sans-serif;
   text-decoration: none;
 }
@@ -63,6 +63,10 @@ header span a {
 
 header #logo {
   max-width: 200px;
+}
+
+nav {
+  padding-bottom: 20px;
 }
 
 nav > div:first-child > section {

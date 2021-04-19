@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
     <link rel="stylesheet" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Project_greenRecycle/style/main.css?after=3">
-    <link rel="stylesheet" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Project_greenRecycle/product/style/product.css?after=6">
+    <link rel="stylesheet" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Project_greenRecycle/product/style/product.css?after=8">
     <script src="https://kit.fontawesome.com/e5f544887c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
@@ -29,9 +29,6 @@
     <main>
         <section>
             <?php
-                echo $_GET["id"];
-                echo $_GET["category"];
-
                 if (isset($_GET["id"]) == false || isset($_GET["category"]) == false) {
                     header('Location: '."http://".$_SERVER['HTTP_HOST']."/project_greenrecycle/index.php");
                 }

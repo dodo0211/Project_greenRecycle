@@ -20,6 +20,7 @@ main > section:first-child > div:nth-child(2) > span {
   flex-grow: 1;
   flex-basis: 0;
   padding: 10px;
+  max-width: 560px;
 }
 
 main > section:first-child > div:nth-child(2) > span:nth-child(2) {
@@ -52,7 +53,7 @@ main
   > div:nth-child(2) {
   flex-grow: 1;
   display: flex;
-  padding: 0 20px;
+  /* padding: 0 10px; */
 }
 
 main
