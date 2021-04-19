@@ -158,20 +158,38 @@ main > span {
   text-align: center;
 }
 
-main > span > section img {
-  min-width: 176px;
-  max-width: 233px;
-  width: 100%;
-}
-
-section {
+main > span > section {
   display: flex;
   flex-wrap: nowrap;
 }
 
-section > span {
+main > span > section > span {
+  display: flex;
+  flex-direction: column;
   margin: 20px;
   flex-basis: 25%;
+}
+
+main > span > section > span > a {
+  flex-grow: 1;
+  flex-basis: 0;
+  width: 100%;
+}
+
+main > span > section > span > a > img {
+  width: 176px;
+  height: 176px;
+  /* width: 233px;
+  height: 233px; */
+  /* min-width: 176px;
+  max-width: 233px;
+  min-height: 176px;
+  max-height: 233px; */
+}
+
+main > span > section > span > p {
+  flex-grow: 0;
+  flex-basis: 0;
 }
 
 main > aside {
