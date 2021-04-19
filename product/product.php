@@ -1,5 +1,5 @@
 <?php
-  session_start();
+//   session_start();
   const LINK_MAX = 8;
 ?>
 <!DOCTYPE html>
