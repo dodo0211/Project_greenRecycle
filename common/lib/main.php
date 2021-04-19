@@ -25,13 +25,24 @@
                             $link = "";
                             $name = "";
                         }
-                        ?>
-                        <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/product/product.php?id=<?php echo $id;?>&category=<?php echo $category;?>">
-                            <img src="<?php echo $link ?>"/>
-                        </a>
-                        <p><?php echo $name ?></p>
-                        <p><?php echo $price ?></p>
-                        <?php
+
+                        if ($link == "") {
+                            ?>
+                            <a>
+                                <img style="opacity:0;">
+                            </a>
+                            <p></p>
+                            <p></p>
+                            <?php
+                        } else {
+                            ?>
+                            <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/product/product.php?id=<?php echo $id;?>&category=<?php echo $category;?>">
+                                <img src="<?php echo $link ?>"/>
+                            </a>
+                            <p><?php echo $name ?></p>
+                            <p><?php echo $price ?></p>
+                            <?php
+                        }
                     ?>
                     </span>
                     <?php
