@@ -60,6 +60,13 @@
   }
 
   fclose($file);
+
+  /**
+   * use in category.php
+   */
+  const SORT_DESC_DATE = 0;
+  const SORT_ASC_PRICE = 1;
+  const SORT_DESC_PRICE = 2;
 ?>
 <span>
     <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/index.php">

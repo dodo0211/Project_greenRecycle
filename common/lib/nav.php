@@ -13,7 +13,7 @@
                 <?php
                     foreach (array_keys($division_array[$first_division]) as $second_division) {
                         ?>
-                        <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/category/category.php?category=<?php echo $division_array[$first_division][$second_division]; ?>">
+                        <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/category/category.php?category=<?php echo $division_array[$first_division][$second_division]; ?>&sort=<?php echo SORT_DESC_DATE;?>">
                             <?php echo $second_division; ?>
                         </a>
                         <?php
