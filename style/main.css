@@ -3,18 +3,30 @@
   outline-offset: -1px; */
   font-family: "Noto Sans KR", sans-serif;
   text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   padding: 0;
   margin: 0;
+  min-width: 900px;
 }
 
-body > div,
+body > header,
+body > nav,
+body > main,
+body > footer {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* body > div,
 main,
 footer {
   padding: 0 50px;
-}
+} */
 
 p {
   margin: 0;
@@ -22,7 +34,11 @@ p {
 }
 
 img {
-  border: 0px solid white;
+  border: 0px;
+}
+
+ul {
+  list-style-type: none;
 }
 
 a:link {
@@ -45,19 +61,27 @@ a:active {
   text-decoration: none;
 }
 
+.common-container {
+  width: 900px;
+  margin: 0 auto;
+}
+
 header {
-  display: flex;
   border-bottom: 1px solid grey;
-  padding: 5px 50px;
   font-size: 1em;
 }
 
-header span {
+header > div {
+  display: flex;
+  padding: 5px 50px;
+}
+
+header > div > span {
   flex-grow: 1;
   flex-basis: 0;
 }
 
-header span a {
+header > div > span a {
   display: block;
 }
 
@@ -74,8 +98,8 @@ nav {
 /* 슬라이드 컨테이너 (5개 슬라이드, 네비게이션바) */
 .slideshow {
   background-color: black;
-  min-width: 960px;
-  height: 600px;
+  min-width: 675px;
+  height: 300px;
   overflow: hidden;
   position: relative;
 }
@@ -131,8 +155,6 @@ nav {
 nav > ul {
   display: flex;
   /* padding: 5px 0; */
-  margin: 0;
-  padding: 0;
   justify-content: center;
   list-style: none;
   background: #ccff90;
@@ -144,8 +166,8 @@ nav > ul > li {
   width: 100%;
   padding: 5px 0;
   text-align: center;
-  min-width: 130px;
-  max-width: 180px;
+  /* min-width: 100px; */
+  max-width: 100px;
   height: 30px;
   line-height: 30px;
   cursor: pointer;
@@ -204,55 +226,77 @@ body > nav > ul > li .dropdown-content a:hover {
   background: #fff8e1;
 }
 
-main {
+main > div.common-container {
   display: flex;
 }
 
-main > span {
+main > div.common-container > span {
   flex-grow: 4;
   flex-basis: 0;
   text-align: center;
 }
 
-main > span > section {
+main > div.common-container > span > section {
   display: flex;
   flex-wrap: nowrap;
 }
 
-main > span > section > span {
+main > div.common-container > span > section > span {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 10px;
   flex-basis: 25%;
 }
 
-main > span > section > span > a {
+main > div.common-container > span > section > span > a {
   flex-grow: 1;
   flex-basis: 0;
   width: 100%;
 }
 
-main > span > section > span > a > img {
-  width: 176px;
-  height: 176px;
-  /* width: 233px;
-  height: 233px; */
-  /* min-width: 176px;
-  max-width: 233px;
-  min-height: 176px;
-  max-height: 233px; */
+main > div.common-container > span > section > span > a > img {
+  width: 165px;
+  height: 165px;
 }
 
-main > span > section > span > p {
+@media screen and (max-width: 800px) {
+  main > div.common-container > span > section > span > a > img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* @media screen and (max-width: 1200px) {
+  main > div.common-container > span > section > span > a > img {
+    width: 165px;
+    height: 165px;
+  } */
+}
+
+main > div.common-container > span > section > span > p {
   flex-grow: 0;
   flex-basis: 0;
 }
 
-main > aside {
+main > div.common-container > aside {
   flex-grow: 1;
   flex-basis: 0;
   max-width: 200px;
   min-width: 150px;
+  font-size: 0.7em;
+  color: #689f38;
+}
+
+main > div.common-container > aside > div > img#map{
+  max-width: 100%;
+}
+
+main > div.common-container > aside > div > p {
+  text-align: center;
+}
+
+main > div.common-container > aside > div > #map {
+  margin-top: 20px;
 }
 
 body > nav .dropdown-content {
@@ -275,30 +319,95 @@ body > nav > ul > li:hover .dropdown-content {
 }
 
 footer {
-  display: flex;
   font-size: 0.7em;
   color: #9e9e9e;
+  background-color: #ccff90;
+}
+
+footer {
   border-top: 1px #9e9e9e solid;
+}
+
+footer > div.common-container {
+  display: flex;
   padding-top: 20px;
 }
 
-footer > span > div {
+footer > div.common-container > span > div {
   display: flex;
   margin-right: 5px;
 }
 
-footer > span > div > div {
+footer > div.common-container > span > div > div {
   margin-right: 20px;
 }
 
-footer > span:first-child {
+footer > div.common-container > span:first-child {
   flex-grow: 6;
 }
 
-footer > span:nth-child(2) {
+footer > div.common-container > span:nth-child(2) {
   flex-grow: 2;
 }
 
-footer > span:nth-child(2) img {
+footer > div.common-container > span:nth-child(2) img {
   max-width: 200px;
+}
+
+.mainArea {
+  width:100%;
+}
+.post {
+  margin:0 auto;
+  width:500px;
+  padding-top:2em;
+}
+.photoSet .slideshow {
+  width:500px;
+  background:white;
+  display:block;
+  height:300px;
+  position:relative;
+  overflow:hidden;
+}
+.slideshow .slide {
+  background:black;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  width:100%;
+  text-align:center;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+}
+.slideshow .slide img {
+  max-width:100%;
+  width:auto;
+  height:100%;
+}
+.slideshow .slide .caption {
+  background:black;
+  color:white;
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:.5em .25em;
+  opacity:.6;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  line-height: 1.6em;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  text-shadow:rgba(200,200,200,.6) 1px 1px 1px;
+}
+.slideshow .slide:hover .caption {
+  opacity:1;
 }

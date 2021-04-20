@@ -1,18 +1,18 @@
-main {
+main > div.common-container {
   display: flex;
   flex-direction: column;
 }
 
-main > h1 {
+main > div.common-container > h1 {
   text-align: center;
 }
 
-main > div {
+main > div.common-container > div {
   text-align: right;
   padding-right: 10px;
 }
 
-main > ul {
+main > div.common-container > ul {
   display: flex;
   list-style: none;
   padding: 0;
@@ -20,22 +20,22 @@ main > ul {
   border-bottom: 1px solid #aed581;
 }
 
-main > ul > a {
+main > div.common-container > ul > a {
   cursor: pointer;
 }
 
-main > ul > a,
-main > ul > li {
+main > div.common-container > ul > a,
+main > div.common-container > ul > li {
   padding: 10px 20px;
   border-right: 1px solid #c5e1a5;
 }
 
-main > section {
+main > div.common-container > section {
   display: flex;
   flex-wrap: wrap;
 }
 
-main > section > span {
+main > div.common-container > section > span {
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -43,7 +43,7 @@ main > section > span {
   text-align: center;
 }
 
-main > section > span > a > img {
+main > div.common-container > section > span > a > img {
   width: 176px;
   height: 176px;
 }
