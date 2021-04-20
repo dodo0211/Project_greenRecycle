@@ -85,18 +85,20 @@
     }
   }
 ?>
-<span>
-    <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/index.php">
-        <img id="logo" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/image/logo.jpg" alt="logo image">
-    </a>
-    <a href="https://cafe.naver.com/black8hal8" target="_blank">
-        초록리사이클카페
-    </a>
-</span>
-<span>
-    검색창
-</span>
-<span>
-    전화문의 <br/>
-    010-6202-7966
-</span>
+<div class="common-container">
+    <span>
+        <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/index.php">
+            <img id="logo" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/image/logo.jpg" alt="logo image">
+        </a>
+        <a href="https://cafe.naver.com/black8hal8" target="_blank">
+            초록리사이클카페
+        </a>
+    </span>
+    <span>
+        검색창
+    </span>
+    <span>
+        전화문의 <br/>
+        010-6202-7966
+    </span>
+</div>

@@ -67,3 +67,5 @@ function slide_func() {
     console.log(timer);
 
 }//end of slide_func
+
+slide_func();
