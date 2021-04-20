@@ -74,8 +74,8 @@ nav {
 /* 슬라이드 컨테이너 (5개 슬라이드, 네비게이션바) */
 .slideshow {
   background-color: black;
-  min-width: 960px;
-  height: 600px;
+  min-width: 675px;
+  height: 300px;
   overflow: hidden;
   position: relative;
 }
@@ -233,10 +233,10 @@ main > span > section > span > a {
 }
 
 main > span > section > span > a > img {
-  width: 176px;
-  height: 176px;
-  /* width: 233px;
-  height: 233px; */
+  /* width: 176px;
+  height: 176px; */
+  width: 233px;
+  height: 233px;
   /* min-width: 176px;
   max-width: 233px;
   min-height: 176px;
