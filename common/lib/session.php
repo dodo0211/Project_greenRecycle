@@ -4,7 +4,7 @@
     // NAVER LOGIN
     define('NAVER_CLIENT_ID', 'nxUB7OJ1tVz_uGQPYbEl');
     define('NAVER_CLIENT_SECRET', 'nxUB7OJ1tVz_uGQPYbEl');
-    define('NAVER_CALLBACK_URL', 'http://192.168.0.164/project_greenrecycle/naver_login_callback.php');
+    define('NAVER_CALLBACK_URL', 'http://localhost/project_greenrecycle/naver_login_callback.php');
     
     // 네이버 로그인 접근토큰 요청 예제
     $naver_state = md5(microtime() . mt_rand());

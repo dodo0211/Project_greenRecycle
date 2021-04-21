@@ -16,13 +16,16 @@
     $category;
     $second_division;
 
-    if ($array[CATEGORY_INDEX] != "") {
-        if ($array[FIRST_DIVISION_INDEX] != "") {
-            $first_division = $array[FIRST_DIVISION_INDEX];
+    if ($array != null) {
+        if ($array[CATEGORY_INDEX] != "") {
+            if ($array[FIRST_DIVISION_INDEX] != "") {
+                $first_division = $array[FIRST_DIVISION_INDEX];
+            }
+            $second_division = $array[SECOND_DIVISION_INDEX];
+            $category = $array[CATEGORY_INDEX];
         }
-        $second_division = $array[SECOND_DIVISION_INDEX];
-        $category = $array[CATEGORY_INDEX];
     }
+
     if (isset($first_division)) {
         if (isset($division_array[$first_division]) == false) {
             $division_array[$first_division] = [];

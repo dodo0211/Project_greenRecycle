@@ -3,8 +3,8 @@
 
     // NAVER LOGIN
     define('NAVER_CLIENT_ID', 'nxUB7OJ1tVz_uGQPYbEl');
-    define('NAVER_CLIENT_SECRET', 'nxUB7OJ1tVz_uGQPYbEl');
-    define('NAVER_CALLBACK_URL', 'http://192.168.0.164/project_greenrecycle/naver_login_callback.php');
+    define('NAVER_CLIENT_SECRET', 'Za4v3FCTlm');
+    define('NAVER_CALLBACK_URL', 'http://localhost/project_greenrecycle/naver_login_callback.php');
 
     if ($_SESSION['naver_state'] != $_GET['state']) {
         header('Location: '."http://".$_SERVER['HTTP_HOST']."/project_greenrecycle/index.php");        
