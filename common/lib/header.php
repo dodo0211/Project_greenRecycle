@@ -1,5 +1,4 @@
 <?php
-  session_start();
   include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/init_db.php";
   
   $division_array = [];

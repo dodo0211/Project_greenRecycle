@@ -293,6 +293,10 @@ main > div.common-container > aside {
   color: #689f38;
 }
 
+/* main > div.common-container > aside > div#naver_id_login > img {
+  max-width: 100%;
+} */
+
 main > div.common-container > aside > div > img#map {
   max-width: 100%;
 }
