@@ -33,6 +33,10 @@
   }
 
   fclose($file);
+  unset($file);
+  unset($array);
+  unset($category);
+  unset($second_division);  
 
   /**
    * use in category.php
@@ -56,6 +60,9 @@
             }
         }
     }
+    unset($first_division);
+    unset($second_division);
+    unset($second_division_text);
   }
 ?>
 <div class="common-container">

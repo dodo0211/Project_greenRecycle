@@ -43,10 +43,25 @@
                         </span>
                         <?php
                     }
+                    
+                    unset($i);
+                    unset($row);
+
+                    unset($price);
+                    unset($link);
+                    unset($name);
+                    unset($category);
+                    unset($id);
                 }
             ?>
             </section>
             <?php
         }
     }
+
+    unset($first_division);
+    unset($second_division);
+    unset($second_division_text);
+    unset($sql);
+    unset($result);
 ?>

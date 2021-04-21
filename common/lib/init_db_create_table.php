@@ -69,6 +69,12 @@ function create_table($conn, $table_name){
       echo "table 생성 실패원인: ".mysqli_error($conn);
     }
   }
+
+  unset($flag);
+  unset($sql);
+  unset($result);
+  unset($row);
+  unset($table_name);
 }
 
 ?>

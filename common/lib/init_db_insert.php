@@ -42,6 +42,11 @@ function insert_init_data($conn, $table_name){
     }
   }//end of if flag
 
+  unset($flag);
+  unset($sql);
+  unset($result);
+  unset($is_set);
+  unset($table_name);
 }//end of function
 
 ?>

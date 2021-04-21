@@ -63,6 +63,7 @@
                                         <?php
                                     }
                                 }
+                                unset($i);
                             ?>
                         </div>
                     </span>
@@ -100,6 +101,17 @@
                             <?php
                         }
                     }
+
+                    unset($i);
+                    unset($sql);
+                    unset($result);
+                    unset($row);
+                    unset($category);
+                    unset($name);
+                    unset($inventory);
+                    unset($price);
+                    unset($link);
+                    unset($links);
                 ?>
             </section>
         </div>

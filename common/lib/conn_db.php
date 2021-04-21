@@ -22,6 +22,8 @@ while(!feof($file)) {
 }
 
 fclose($file);
+unset($file);
+unset($array);
 
 $db_flag = false;
 
@@ -53,5 +55,9 @@ if ($db_flag === false) {
     }
 }
 
+unset($sql);
+unset($result);
+unset($row);
+unset($db_flag);
 
 $db_conn = mysqli_select_db($conn, DB_NAME) or die('Error:' . mysqli_error($conn));
