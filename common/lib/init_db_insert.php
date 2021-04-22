@@ -13,7 +13,7 @@ function insert_init_data($conn, $table_name){
   if($flag == false){
     switch($table_name){
           case MEMBER_TABLE :
-            $sql = "INSERT INTO `member_table` VALUES ('admin', '1234', '송훈일', '01079978395', '주소');";
+            $sql = "INSERT INTO `member_table` VALUES (`self`, 'admin', '송훈일', 'M', '01079978395', '1992', \'".date("Y-m-d")."\');";
             break;
           // case PRODUCT_TABLE :            
           //   $sql = "INSERT INTO `product_table` VALUES (null, 'Ca', '제품명 테스트', 1, 1000000, 

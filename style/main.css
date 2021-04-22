@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   padding: 0;
   margin: 0;
-  min-width: 900px;
+  min-width: 1130px;
 }
 
 body > header,
@@ -64,7 +64,7 @@ a:active {
 }
 
 .common-container {
-  width: 900px;
+  width: 1130px;
   margin: 0 auto;
 }
 
@@ -73,17 +73,17 @@ header {
   font-size: 1em;
 }
 
-header > div {
+header > div.common-container {
   display: flex;
-  padding: 5px 50px;
+  /* padding: 5px 50px; */
 }
 
-header > div > span {
+header > div.common-container > span:nth-child(2) {
   flex-grow: 1;
   flex-basis: 0;
 }
 
-header > div > span a {
+header > div.common-container > span a {
   display: block;
 }
 
@@ -272,12 +272,12 @@ main > div.common-container > span > section > span > a > img {
   }
 }
 
-/* @media screen and (max-width: 1200px) {
+@media screen and (max-width: 1130px) {
   main > div.common-container > span > section > span > a > img {
-    width: 165px;
-    height: 165px;
+    width: 180px;
+    height: 180px;
   }
-} */
+}
 
 main > div.common-container > span > section > span > p {
   flex-grow: 0;
@@ -293,9 +293,9 @@ main > div.common-container > aside {
   color: #689f38;
 }
 
-/* main > div.common-container > aside > div#naver_id_login > img {
+main > div.common-container > aside > div#naver_id_login > a > img {
   max-width: 100%;
-} */
+}
 
 main > div.common-container > aside > div > img#map {
   max-width: 100%;

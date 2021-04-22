@@ -48,14 +48,15 @@ function create_table($conn, $table_name){
                     ) ENGINE = InnoDB DEFAULT CHARSET = utf8;";
             break;
         case CART_TABLE:
-            $sql = "CREATE TABLE `cart_table` (
-                        `member_id` varchar(20) not null,
-                        `product_category` varchar(7) not null,
-                        `product_name` varchar(20) not null,
-                        `count` int not null,
-                        constraint `pk_cart_member_id_product_category_name` primary key(`member_id`, `product_category`, `product_name`),
-                        constraint `fk_cart_member_id` foreign key(`member_id`) references `member_table`(`id`) on delete cascade on update cascade,
-                        constraint `fk_cart_product_category_name` foreign key(`product_category`, `product_name`) references `product_table`(`category`, `name`) on delete cascade on update cascade
+            $sql = "CREATE TABLE if not exists `member_table`(
+                      `from` varchar(5) not null,
+                      `id` varchar(10) not null unique,
+                      `name` varchar(6) not null,
+                        `gender` varchar(1) not null,
+                      `phone` varchar(14) not null,
+                        `birthyear` varchar(4) not null,
+                        `date` date not null,
+                      constraint `pk_from_id` primary key(`from`, `id`)
                     ) ENGINE = InnoDB DEFAULT CHARSET = utf8;";
             break;
       default:
