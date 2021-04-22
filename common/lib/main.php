@@ -1,4 +1,5 @@
 <?php
+    include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/conn_db.php";
     const COLUMN_MAX = 4;
 
     foreach (array_keys($division_array) as $first_division) {
@@ -64,4 +65,5 @@
     unset($second_division_text);
     unset($sql);
     unset($result);
+    mysqli_close($conn);
 ?>

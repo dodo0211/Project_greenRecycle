@@ -29,12 +29,6 @@ body > footer {
   text-align: center;
 }
 
-/* body > div,
-main,
-footer {
-  padding: 0 50px;
-} */
-
 img {
   border: 0px;
 }
@@ -70,12 +64,11 @@ a:active {
 
 header {
   border-bottom: 1px solid grey;
-  font-size: 1em;
 }
 
 header > div.common-container {
   display: flex;
-  /* padding: 5px 50px; */
+  align-items: center;
 }
 
 header > div.common-container > span:nth-child(2) {
@@ -156,7 +149,6 @@ nav {
 
 nav > ul {
   display: flex;
-  /* padding: 5px 0; */
   justify-content: center;
   list-style: none;
   background: #ccff90;
@@ -168,7 +160,6 @@ nav > ul > li {
   width: 100%;
   padding: 5px 0;
   text-align: center;
-  /* min-width: 100px; */
   max-width: 100px;
   height: 30px;
   line-height: 30px;
@@ -226,6 +217,25 @@ nav > ul > li:hover .dropdown-content a:first-child {
 
 nav > ul > li .dropdown-content a:hover {
   background: #fff8e1;
+}
+
+nav .dropdown-content {
+  width: 100%;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+nav .dropdown-content a {
+  box-sizing: border-box;
+  text-decoration: none;
+  display: block;
+}
+
+nav > ul > li:hover .dropdown-content {
+  display: block;
 }
 
 main {
@@ -307,25 +317,6 @@ main > div.common-container > aside > div > p {
 
 main > div.common-container > aside > div > #map {
   margin-top: 20px;
-}
-
-body > nav .dropdown-content {
-  width: 100%;
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-body > nav .dropdown-content a {
-  box-sizing: border-box;
-  text-decoration: none;
-  display: block;
-}
-
-body > nav > ul > li:hover .dropdown-content {
-  display: block;
 }
 
 footer {

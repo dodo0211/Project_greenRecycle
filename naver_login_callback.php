@@ -54,26 +54,36 @@
 
         $me_responseArr = json_decode($me_response, true);
 
-        // 회원 아이디(naver_ 접두사에 네이버 아이디를 붙여줌)
-        $mb_uid = 'naver_'.$me_responseArr['response']['id'];
-        print_r($me_responseArr['response']);
-        // 회원가입 DB에서 회원이 있으면(이미 가입되어 있다면) 토큰을 업데이트하고 로그인 함
-        // if (회원정보가 있다면) {
-        //     // 멤버 DB에 토큰값 업데이트 $responseArr['access_token']
-        //     // 로그인
-        // }
-        // // 회원정보가 없다면 회원가입
-        // else {
-        //     // 회원아이디 $mb_uid
-        //     $mb_nickname = $me_responseArr['response']['nickname']; // 닉네임 
-        //     $mb_email = $me_responseArr['response']['email']; // 이메일 
-        //     $mb_gender = $me_responseArr['response']['gender']; // 성별 F: 여성, M: 남성, U: 확인불가 
-        //     $mb_age = $me_responseArr['response']['age']; // 연령대 
-        //     $mb_birthday = $me_responseArr['response']['birthday']; // 생일(MM-DD 형식) 
-        //     $mb_profile_image = $me_responseArr['response']['profile_image']; // 프로필 이미지
+        include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/conn_db.php";
 
-        //     // 멤버 db에 토큰과 회원정보를 넣고 로그인
-        // }
+        // 회원가입 DB에서 회원이 있으면(이미 가입되어 있다면) 토큰을 업데이트하고 로그인 함
+        $sql = "SELECT id, name FROM member_table WHERE from='naver' AND id='{$me_responseArr['response']['id']}'";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows == 1) {
+            $sql = "UPDATE member_table SET `token` = {$responseArr['access_token']} WHERE from='naver' AND id='{$me_responseArr['response']['id']}'";
+        }
+        // 회원정보가 없다면 회원가입
+        else {
+            $sql = "INSERT INTO `member_table` VALUES (
+                'naver', 
+                '{$me_responseArr['response']['id']}',
+                '{$me_responseArr['response']['name']}',
+                '{$me_responseArr['response']['gender']}',
+                '{$me_responseArr['response']['mobile']}',
+                '{$me_responseArr['response']['birthyear']}',
+                '{$responseArr['access_token']}',
+                \'.date('Y-m-d').\'
+            );";
+        }
+
+        if (mysqli_query($conn,$sql)) {
+            echo "<script>alert('$table_name 테이블 초기값 셋팅 완료');</script>";
+        } else {
+            echo "<script>alert('실패원인".mysqli_error($conn)."');</script>";
+        }
+
+        mysqli_close($conn);
     } else {
         // 로그 남기기
         header('Location: '."http://".$_SERVER['HTTP_HOST']."/project_greenrecycle/index.php");

@@ -27,8 +27,8 @@ function insert_init_data($conn, $table_name){
           //   'https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MDVfMjUy/MDAxNjE3NjEzNDcyNzg0.xf47EuB21qPZMhB2gaFs6s86E-88ph6bKKesqzEdnDIg.jSGpDCbzfOKJvpQ3jcUWk9BlVC29lOy4jUurUgo4IS4g.JPEG/150773511_8_1617598631_w856.jpg?type=w1600'
           //   );";
           //   break;
-          // case CART_TABLE :
-          //   $sql = "INSERT INTO `cart_table` VALUES ('admin', 'Ca', '1');";
+          // case DIBS_TABLE :
+          //   $sql = "INSERT INTO `dibs_table` VALUES ('admin', 'Ca', '1');";
           //   break;
       default:
         echo "<script>alert('해당 테이블 이름이 없습니다. ');</script>";

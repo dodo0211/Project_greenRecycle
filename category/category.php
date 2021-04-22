@@ -41,6 +41,8 @@
                         break;
                 }
 
+                include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/conn_db.php";
+                
                 $sql = "SELECT * FROM product_table WHERE category='".$_GET["category"]."'".$orderby;
                 $result = $conn->query($sql);
                 
@@ -66,6 +68,7 @@
                 }
 
                 unset($second_division_text);
+                mysqli_close($conn);
             ?>
             <ul>
                 <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/category/category.php?category=<?php echo $_GET["category"]; ?>&sort=<?php echo SORT_DESC_DATE;?>">

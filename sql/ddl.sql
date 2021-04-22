@@ -3,7 +3,7 @@ create schema `green_recycle_db`;
 
 use `green_recycle_db`;
 
-drop table if exists `cart_table`;
+drop table if exists `dibs_table`;
 drop table if exists `product_table`;
 drop table if exists `member_table`;
 
@@ -14,6 +14,7 @@ CREATE TABLE if not exists `member_table`(
     `gender` varchar(1) not null,
 	`phone` varchar(14) not null,
     `birthyear` varchar(4) not null,
+    `token` varchar(62) not null,
     `date` date not null,
 	constraint `pk_from_id` primary key(`from`, `id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
