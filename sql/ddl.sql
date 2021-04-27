@@ -12,7 +12,7 @@ CREATE TABLE if not exists `member_table`(
 	`id` varchar(10) not null unique,
 	`name` varchar(6) not null,
     `gender` varchar(1) not null,
-	`phone` varchar(14) not null,
+	`mobile` varchar(14) not null,
     `birthyear` varchar(4) not null,
     `token` varchar(62) not null,
     `date` date not null,
