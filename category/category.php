@@ -41,10 +41,15 @@
                         break;
                 }
 
+                include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/conn_db.php";
+                
                 $sql = "SELECT * FROM product_table WHERE category='".$_GET["category"]."'".$orderby;
                 $result = $conn->query($sql);
-            ?>
-            <?php
+                
+                unset($sort);
+                unset($orderby);
+                unset($sql);
+
                 foreach (array_keys($division_array) as $first_division) {
                     foreach ($division_array[$first_division] as $second_division) {
                         if ($second_division == $_GET["category"]) {
@@ -61,6 +66,9 @@
                         }
                     }
                 }
+
+                unset($second_division_text);
+                mysqli_close($conn);
             ?>
             <ul>
                 <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/category/category.php?category=<?php echo $_GET["category"]; ?>&sort=<?php echo SORT_DESC_DATE;?>">
@@ -80,8 +88,7 @@
                 <?php
                     for ($i = 0; $i < $result->num_rows; $i += 1) {
                         ?>
-                        <span>
-                        
+                        <span>                        
                         <?php
                             $row = $result->fetch_assoc();
                             $price = number_format($row["price"], 0, '', ',')."원";
@@ -98,6 +105,14 @@
                         </span>
                         <?php
                     }
+
+                    unset($result);
+                    unset($row);
+                    unset($price);
+                    unset($link);
+                    unset($name);
+                    unset($category);
+                    unset($id);
                 ?>
             </section>
         </div>

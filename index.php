@@ -1,3 +1,4 @@
+<?php include $_SERVER['DOCUMENT_ROOT'] . "/Project_greenRecycle/common/lib/session.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 

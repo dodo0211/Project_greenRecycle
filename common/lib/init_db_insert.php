@@ -13,7 +13,7 @@ function insert_init_data($conn, $table_name){
   if($flag == false){
     switch($table_name){
           case MEMBER_TABLE :
-            $sql = "INSERT INTO `member_table` VALUES ('admin', '1234', '송훈일', '01079978395', '주소');";
+            $sql = "INSERT INTO `member_table` VALUES (`self`, 'admin', '송훈일', 'M', '01079978395', '1992', \'".date("Y-m-d")."\');";
             break;
           // case PRODUCT_TABLE :            
           //   $sql = "INSERT INTO `product_table` VALUES (null, 'Ca', '제품명 테스트', 1, 1000000, 
@@ -27,8 +27,8 @@ function insert_init_data($conn, $table_name){
           //   'https://cafeptthumb-phinf.pstatic.net/MjAyMTA0MDVfMjUy/MDAxNjE3NjEzNDcyNzg0.xf47EuB21qPZMhB2gaFs6s86E-88ph6bKKesqzEdnDIg.jSGpDCbzfOKJvpQ3jcUWk9BlVC29lOy4jUurUgo4IS4g.JPEG/150773511_8_1617598631_w856.jpg?type=w1600'
           //   );";
           //   break;
-          // case CART_TABLE :
-          //   $sql = "INSERT INTO `cart_table` VALUES ('admin', 'Ca', '1');";
+          // case DIBS_TABLE :
+          //   $sql = "INSERT INTO `dibs_table` VALUES ('admin', 'Ca', '1');";
           //   break;
       default:
         echo "<script>alert('해당 테이블 이름이 없습니다. ');</script>";
@@ -42,6 +42,11 @@ function insert_init_data($conn, $table_name){
     }
   }//end of if flag
 
+  unset($flag);
+  unset($sql);
+  unset($result);
+  unset($is_set);
+  unset($table_name);
 }//end of function
 
 ?>

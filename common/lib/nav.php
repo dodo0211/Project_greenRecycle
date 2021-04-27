@@ -54,5 +54,7 @@
         </li>
     <?php
         }
+        unset($first_division);
+        unset($second_division);
     ?>
 </ul>

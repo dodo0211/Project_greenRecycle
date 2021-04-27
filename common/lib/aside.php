@@ -1,4 +1,8 @@
-<div>로그인</div>
+<div id="naver_id_login">
+    <a href="<?php echo $naver_login_api_url; ?>">
+        <img height="50" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/image/naver_login.png"/>
+    </a>
+</div>
 <div>
     <p>010-6202-7966</p>
 </div>       

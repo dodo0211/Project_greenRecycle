@@ -25,8 +25,12 @@
                         header('Location: '."http://".$_SERVER['HTTP_HOST']."/project_greenrecycle/index.php");
                     }
 
+                    include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/conn_db.php";
+
                     $sql = "SELECT * FROM product_table WHERE id='".$_GET["id"]."' AND category='".$_GET["category"]."'";
                     $result = $conn->query($sql);
+
+                    mysqli_close($conn);
 
                     if ($result->num_rows > 0) {
                         $row = $result->fetch_assoc();
@@ -63,6 +67,7 @@
                                         <?php
                                     }
                                 }
+                                unset($i);
                             ?>
                         </div>
                     </span>
@@ -100,6 +105,17 @@
                             <?php
                         }
                     }
+
+                    unset($i);
+                    unset($sql);
+                    unset($result);
+                    unset($row);
+                    unset($category);
+                    unset($name);
+                    unset($inventory);
+                    unset($price);
+                    unset($link);
+                    unset($links);
                 ?>
             </section>
         </div>
