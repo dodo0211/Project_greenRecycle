@@ -7,7 +7,7 @@ use `green_recycle_db`;
 
 select * from `member_table`;
 
-INSERT INTO `member_table` VALUES ('admin', '1234', '송훈일', '01079978395', '주소', curdate());
+-- INSERT INTO `member_table` VALUES ('admin', '1234', '송훈일', '01079978395', '주소', curdate());
 
 -- 사무용	A	가구	a	Aa
 -- 		사무용품	b	Ab
@@ -169,6 +169,9 @@ INSERT INTO `product_table` VALUES (null, 'Da', '2015년 라셀르 냉장고', 1
 );
 
 select * from `green_recycle_db`.`product_table`;
+select * from `green_recycle_db`.`member_table`;
+
+SELECT id, name FROM member_table WHERE `from`='naver' AND `id`='24240848';
 
 -- select * from `green_recycle_db`.`product_table` where `category`="Aa" order by `date` ASC limit 5;
 -- select * from `green_recycle_db`.`product_table` where `category`="Ab" order by `date` ASC limit 5;
