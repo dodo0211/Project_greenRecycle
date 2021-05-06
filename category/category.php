@@ -106,13 +106,7 @@
                         <?php
                     }
 
-                    unset($result);
-                    unset($row);
-                    unset($price);
-                    unset($link);
-                    unset($name);
-                    unset($category);
-                    unset($id);
+                    unset($result, $row, $$proce, $link, $name, $id);
                 ?>
             </section>
         </div>

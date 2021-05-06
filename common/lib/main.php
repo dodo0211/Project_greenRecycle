@@ -45,14 +45,9 @@
                         <?php
                     }
                     
-                    unset($i);
-                    unset($row);
+                    unset($i,$row);
 
-                    unset($price);
-                    unset($link);
-                    unset($name);
-                    unset($category);
-                    unset($id);
+                    unset($price, $link, $name, $category, $id);   
                 }
             ?>
             </section>
@@ -60,10 +55,6 @@
         }
     }
 
-    unset($first_division);
-    unset($second_division);
-    unset($second_division_text);
-    unset($sql);
-    unset($result);
+    unset($first_division, $second_division, $second_division_text, $sql, $result);
     mysqli_close($conn);
 ?>

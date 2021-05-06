@@ -3,12 +3,14 @@
         <img height="50" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/image/naver_login.png"/>
     </a>
 </div>
+<br>
 <div>
     <p>010-6202-7966</p>
 </div>       
 <div>
     <br/>
     <p>계좌번호</p>
+    <p>우리은행 1002-754-488398 김성제</p>
 </div>     
 <div>
     <br/>
