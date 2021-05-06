@@ -66,17 +66,28 @@ header {
   border-bottom: 1px solid grey;
 }
 
-header > div.common-container {
+header > div.common-container > div:nth-child(2) {
   display: flex;
   align-items: center;
 }
 
-header > div.common-container > span:nth-child(2) {
+header > div.common-container > div:first-child > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header > div.common-container > div:first-child > ul li {
+  font-size: 0.8em;
+  padding: 5px;
+  cursor: pointer;
+}
+
+header > div.common-container > div:nth-child(2) > span:nth-child(2) {
   flex-grow: 1;
   flex-basis: 0;
 }
 
-header > div.common-container > span a {
+header > div.common-container > div:nth-child(2) > span a {
   display: block;
 }
 

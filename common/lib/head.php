@@ -4,7 +4,7 @@
 <meta name="referrer" content="no-referrer">
 
 <!-- common css -->
-<link rel="stylesheet" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/style/main.css?after=33">
+<link rel="stylesheet" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/style/main.css?after=34">
 
 <!-- font awesome -->
 <link rel="preconnect" href="https://fonts.gstatic.com">

@@ -3,7 +3,7 @@
 
     // NAVER LOGIN
     define('NAVER_CLIENT_ID', 'nxUB7OJ1tVz_uGQPYbEl');
-    define('NAVER_CALLBACK_URL', 'https://'.$_SERVER['HTTP_HOST'].'/naver_login_callback.php');
+    define('NAVER_CALLBACK_URL', 'https://'.$_SERVER['HTTP_HOST'].'/login/naver_login_callback.php');
     
     // 네이버 로그인 접근토큰 요청
     $_SESSION['naver_state'] = md5(microtime() . mt_rand());
