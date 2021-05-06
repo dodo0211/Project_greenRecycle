@@ -57,14 +57,16 @@
         include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/conn_db.php";
 
         // 회원가입 DB에서 회원이 있으면(이미 가입되어 있다면) 토큰을 업데이트하고 로그인 함
-        $sql = "SELECT id, name FROM member_table WHERE from='naver' AND id='{$me_responseArr['response']['id']}'";
+        $sql = "SELECT `id`, `name` FROM member_table WHERE `from`='naver' AND `id`='{$me_responseArr['response']['id']}'";
         $result = $conn->query($sql);
 
-        if ($result->num_rows == 1) {
-            $sql = "UPDATE member_table SET `token` = {$responseArr['access_token']} WHERE from='naver' AND id='{$me_responseArr['response']['id']}'";
+        if (is_object($result) && $result->num_rows == 1) {
+            echo "<script>alert('{$me_responseArr['response']['id']} 유저 접근 토큰 갱신 시도');</script>";
+            $sql = "UPDATE `member_table` SET `token`='{$responseArr['access_token']}' WHERE `from`='naver' AND `id`='{$me_responseArr['response']['id']}'";
         }
-        // 회원정보가 없다면 회원가입
         else {
+            echo "<script>alert('{$me_responseArr['response']['id']} 유저 db 추가 시도');</script>";
+            // 회원정보가 없다면 회원가입
             $sql = "INSERT INTO `member_table` VALUES (
                 'naver', 
                 '{$me_responseArr['response']['id']}',
@@ -73,19 +75,39 @@
                 '{$me_responseArr['response']['mobile']}',
                 '{$me_responseArr['response']['birthyear']}',
                 '{$responseArr['access_token']}',
-                \'.date('Y-m-d').\'
-            );";
+                '".date('Y-m-d')."');";
         }
 
-        if (mysqli_query($conn,$sql)) {
-            echo "<script>alert('$table_name 테이블 초기값 셋팅 완료');</script>";
+        if (mysqli_query($conn, $sql)) {
+            echo "<script>alert('{$me_responseArr['response']['id']} 유저 접속 완료');</script>";
         } else {
-            echo "<script>alert('실패원인".mysqli_error($conn)."');</script>";
+            echo "<script>alert('실패');</script>";
+            echo "\n error : ".mysqli_error($conn);
         }
 
         mysqli_close($conn);
-    } else {
-        // 로그 남기기
+
+        unset($responseArr);
+        unset($me_headers);
+        unset($me_is_post);
+        unset($me_ch);
+        unset($me_response);
+        unset($me_status_code);
+        unset($me_responseArr);
+        unset($sql);
+        unset($result);
+
         header('Location: '."http://".$_SERVER['HTTP_HOST']."/project_greenrecycle/index.php");
+    } else {
+        echo "<script>
+                alert('status_code({$status_code}) 비정상 접속 시도');
+                window.location = 'http://".$_SERVER['HTTP_HOST']."/project_greenrecycle/index.php';
+            </script>";
     }
+
+    unset($naver_curl);
+    unset($is_post);
+    unset($ch);
+    unset($response);
+    unset($status_code);
 ?>

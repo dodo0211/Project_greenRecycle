@@ -14,7 +14,7 @@ CREATE TABLE if not exists `member_table`(
     `gender` varchar(1) not null,
 	`mobile` varchar(14) not null,
     `birthyear` varchar(4) not null,
-    `token` varchar(62) not null,
+    `token` varchar(92) not null,
     `date` date not null,
 	constraint `pk_from_id` primary key(`from`, `id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8;
