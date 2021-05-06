@@ -1,6 +1,6 @@
 <div id="naver_id_login">
     <a href="<?php echo $naver_login_api_url; ?>">
-        <img height="50" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/image/naver_login.png"/>
+        <img height="50" src="https://<?php echo $_SERVER['HTTP_HOST']; ?>/image/naver_login.png"/>
     </a>
 </div>
 <br>
@@ -19,7 +19,7 @@
     <!-- <div id="map" style="width:100%;height:300px;"></div> -->
 </div>
 <div>
-    <img id="map" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/image/map.png" alt="map image">
+    <img id="map" src="https://<?php echo $_SERVER['HTTP_HOST']; ?>/image/map.png" alt="map image">
 </div>
 
 <!-- <script>

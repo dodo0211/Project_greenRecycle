@@ -4,11 +4,11 @@
     // NAVER LOGIN
     define('NAVER_CLIENT_ID', 'nxUB7OJ1tVz_uGQPYbEl');
     define('NAVER_CLIENT_SECRET', 'Za4v3FCTlm');
-    define('NAVER_CALLBACK_URL', 'http://localhost/project_greenrecycle/naver_login_callback.php');
+    define('NAVER_CALLBACK_URL', 'https://localhost/naver_login_callback.php');
 
     if ($_SESSION['naver_state'] != $_GET['state']) {
         // 불법 요청 로그 남기기
-        header('Location: '."http://".$_SERVER['HTTP_HOST']."/project_greenrecycle/index.php");        
+        header('Location: '."https://".$_SERVER['HTTP_HOST']."/index.php");        
     }
 
     // $naver_curl = "https://nid.naver.com/oauth2.0/token?grant_type=authorization_code&client_id=".NAVER_CLIENT_ID."&client_secret=".NAVER_CLIENT_SECRET."&redirect_uri=".urlencode(NAVER_CALLBACK_URL)."&code=".$_GET['code']."&state=".$_GET['state'];
@@ -54,7 +54,7 @@
 
         $me_responseArr = json_decode($me_response, true);
 
-        include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/conn_db.php";
+        include $_SERVER['DOCUMENT_ROOT']."/common/lib/conn_db.php";
 
         // 회원가입 DB에서 회원이 있으면(이미 가입되어 있다면) 토큰을 업데이트하고 로그인 함
         $sql = "SELECT `id`, `name` FROM member_table WHERE `from`='naver' AND `id`='{$me_responseArr['response']['id']}'";
@@ -97,11 +97,11 @@
         unset($sql);
         unset($result);
 
-        header('Location: '."http://".$_SERVER['HTTP_HOST']."/project_greenrecycle/index.php");
+        header('Location: '."https://".$_SERVER['HTTP_HOST']."/index.php");
     } else {
         echo "<script>
                 alert('status_code({$status_code}) 비정상 접속 시도');
-                window.location = 'http://".$_SERVER['HTTP_HOST']."/project_greenrecycle/index.php';
+                window.location = 'https://".$_SERVER['HTTP_HOST']."/index.php';
             </script>";
     }
 

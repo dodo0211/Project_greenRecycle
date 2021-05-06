@@ -1,9 +1,9 @@
 <?php
-  include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/init_db.php";
+  include $_SERVER['DOCUMENT_ROOT']."/common/lib/init_db.php";
   
   $division_array = [];
   
-  $file = fopen($_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/doc/category.csv", "r");
+  $file = fopen($_SERVER['DOCUMENT_ROOT']."/doc/category.csv", "r");
 
   const FIRST_DIVISION_INDEX = 0;
   const SECOND_DIVISION_INDEX = 2;
@@ -69,8 +69,8 @@
 ?>
 <div class="common-container">
     <span>
-        <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/index.php">
-            <img id="logo" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/image/logo.jpg" alt="logo image">
+        <a href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/index.php">
+            <img id="logo" src="https://<?php echo $_SERVER['HTTP_HOST']; ?>/image/logo.jpg" alt="logo image">
         </a>
         <a href="https://cafe.naver.com/black8hal8" target="_blank">
             초록리사이클카페

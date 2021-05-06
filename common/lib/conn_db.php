@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set("Asia/seoul");
 
-$file = fopen($_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/doc/db_conf.csv", "r");
+$file = fopen($_SERVER['DOCUMENT_ROOT']."/doc/db_conf.csv", "r");
 
 $HOST_INDEX = 0;
 $USER_INDEX = 1;
