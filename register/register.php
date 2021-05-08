@@ -40,7 +40,7 @@
 
 <head>
     <?php include $_SERVER['DOCUMENT_ROOT'] . "/common/lib/head.php"; ?>
-    <link rel="stylesheet" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/register/register.css?after=1">
+    <link rel="stylesheet" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/register/register.css?after=3">
 </head>
 
 <body>
@@ -57,65 +57,87 @@
             <div id="box">
                 <div id="title">
                     <div>회원가입</div>
-                    <div>*필수입력사항</div>
+                    <div><span id="asterisk">*</span>필수입력사항</div>
                 </div>
                 <form name="member_form" method="post" action="./register_insert.php">
 					<table>
 						<tr>
-							<th>아이디(ID)</th>
+							<th>아이디(ID)<span id="asterisk">*</span></th>
 							<td>
                                 <input type="text" name="id" placeholder="6자 이상의 영문 혹은 영문과 숫자를 조합">
-								<input type="button" value="중복 확인" onclick="check_id()">
+								<input type="button" value="중복확인" onclick="check_id()">
 							</td>
 						</tr>
 						<tr>
-							<th>비밀번호</th>
+							<th>비밀번호<span id="asterisk">*</span></th>
 							<td>
                                 <input type="password" name="password" placeholder="비밀번호를 입력해주세요.">
 							</td>
 						</tr>
 						<tr>
-							<th>비밀번호 확인</th>
+							<th>비밀번호 확인<span id="asterisk">*</span></th>
 							<td colspan="2">
                                 <input type="password" name="password_confirm" placeholder="비밀번호를 한 번 더 입력해주세요.">
                             </td>
 						</tr>
 						<tr>
-							<th>이름</th>
+							<th>이름<span id="asterisk">*</span></th>
 							<td>
                                 <input type="text" name="name" placeholder="이름을 입력해주세요">
 							</td>
 						</tr>
 						<tr>
-							<th>이메일(E-mail)</th>
+							<th>이메일(E-mail)<span id="asterisk">*</span></th>
 							<td>
                                 <input type="text" name="email" placeholder="예:chorkrecycle@chorokrecycle.com">
+								<input type="button" value="중복확인" onclick="check_email()">
 							</td>
 						</tr>
 						<tr>
-							<th>휴대폰</th>
+							<th>휴대폰<span id="asterisk">*</span></th>
 							<td>
                                 <input type="text" name="mobile" placeholder="숫자만 입력해주세요">
+                                
+								<input type="button" value="인증번호 받기" onclick="check_mobile()">
 							</td>
 						</tr>
 						<tr>
 							<th>성별</th>
 							<td>
-                                radio button
+                                <label>
+                                    <input type="radio" id="male" name="gender" value="male">
+                                    남성
+                                </label>
+                                <label>
+                                    <input type="radio" id="female" name="gender" value="female">
+                                    여성
+                                </label>
+                                <label>
+                                    <input type="radio" id="none" name="gender" value="none" checked>
+                                    선택 안 함
+                                </label>
 							</td>
 						</tr>
 						<tr>
 							<th>생년월일</th>
 							<td>
-                                input
+                                <div>
+                                    <input type="text" name="birth_year" placeholder="YYYY">
+                                    <span>/</span>
+                                    <input type="text" name="birth_month" placeholder="MM">
+                                    <span>/</span>
+                                    <input type="text" name="birth_day" placeholder="DD">
+                                </div>
 							</td>
 						</tr>
 					</table>
 					<br>
+                    <div>
+                        이용약관
+                    </div>
 					<div>
 						<!-- 회원가입 양식 확인 후 전송하기 때문에 submit이 아닌 button -->
-						<input type="button" value="초기화" onclick="reset_form()">
-						<input type="button" value="회원가입" onclick="check_input()">
+						<input type="button" value="가입하기" onclick="check_input()">
 					</div>
 				</form>
             </div> <!-- login_box -->
