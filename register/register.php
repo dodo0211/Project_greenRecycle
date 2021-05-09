@@ -41,9 +41,14 @@
 <head>
     <?php include $_SERVER['DOCUMENT_ROOT'] . "/common/lib/head.php"; ?>
     <link rel="stylesheet" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/register/register.css?after=3">
+    <script src="https://<?php echo $_SERVER['HTTP_HOST']; ?>/register/register.js"></script>
 </head>
 
 <body>
+    <div id="check_id_window">
+      overlay test  
+    </div>
+
     <header>
         <?php include $_SERVER['DOCUMENT_ROOT'] . "/common/lib/header.php"; ?>
     </header>
@@ -61,75 +66,84 @@
                 </div>
                 <form name="member_form" method="post" action="./register_insert.php">
 					<table>
-						<tr>
-							<th>아이디(ID)<span id="asterisk">*</span></th>
-							<td>
-                                <input type="text" name="id" placeholder="6자 이상의 영문 혹은 영문과 숫자를 조합">
-								<input type="button" value="중복확인" onclick="check_id()">
-							</td>
-						</tr>
-						<tr>
-							<th>비밀번호<span id="asterisk">*</span></th>
-							<td>
-                                <input type="password" name="password" placeholder="비밀번호를 입력해주세요.">
-							</td>
-						</tr>
-						<tr>
-							<th>비밀번호 확인<span id="asterisk">*</span></th>
-							<td colspan="2">
-                                <input type="password" name="password_confirm" placeholder="비밀번호를 한 번 더 입력해주세요.">
-                            </td>
-						</tr>
-						<tr>
-							<th>이름<span id="asterisk">*</span></th>
-							<td>
-                                <input type="text" name="name" placeholder="이름을 입력해주세요">
-							</td>
-						</tr>
-						<tr>
-							<th>이메일(E-mail)<span id="asterisk">*</span></th>
-							<td>
-                                <input type="text" name="email" placeholder="예:chorkrecycle@chorokrecycle.com">
-								<input type="button" value="중복확인" onclick="check_email()">
-							</td>
-						</tr>
-						<tr>
-							<th>휴대폰<span id="asterisk">*</span></th>
-							<td>
-                                <input type="text" name="mobile" placeholder="숫자만 입력해주세요">
-                                
-								<input type="button" value="인증번호 받기" onclick="check_mobile()">
-							</td>
-						</tr>
-						<tr>
-							<th>성별</th>
-							<td>
-                                <label>
-                                    <input type="radio" id="male" name="gender" value="male">
-                                    남성
-                                </label>
-                                <label>
-                                    <input type="radio" id="female" name="gender" value="female">
-                                    여성
-                                </label>
-                                <label>
-                                    <input type="radio" id="none" name="gender" value="none" checked>
-                                    선택 안 함
-                                </label>
-							</td>
-						</tr>
-						<tr>
-							<th>생년월일</th>
-							<td>
-                                <div>
-                                    <input type="text" name="birth_year" placeholder="YYYY">
-                                    <span>/</span>
-                                    <input type="text" name="birth_month" placeholder="MM">
-                                    <span>/</span>
-                                    <input type="text" name="birth_day" placeholder="DD">
-                                </div>
-							</td>
-						</tr>
+                        <tbody>
+                            <tr>
+                                <th>아이디(ID)<span id="asterisk">*</span></th>
+                                <td>
+                                    <input type="text" id="id" name="id" placeholder="6자 이상의 영문 혹은 영문과 숫자를 조합" onclick="check_id()" oninput="check_id()">
+                                    <input type="button" value="중복확인" onclick="check_id_on()">
+                                </td>
+                            </tr>
+                            <tr id="check_id_tr">
+                                <th>&nbsp;</th>
+                                <td>
+                                    <div id="condition_id_regexp"><span>* </span>6자 이상의 영문 혹은 영문과 숫자를 조합</div>
+                                    <div id="condition_id_duplicate"><span>* </span>아이디 중복확인</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>비밀번호<span id="asterisk">*</span></th>
+                                <td>
+                                    <input type="password" name="password" placeholder="비밀번호를 입력해주세요.">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>비밀번호 확인<span id="asterisk">*</span></th>
+                                <td colspan="2">
+                                    <input type="password" name="password_confirm" placeholder="비밀번호를 한 번 더 입력해주세요.">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이름<span id="asterisk">*</span></th>
+                                <td>
+                                    <input type="text" name="name" placeholder="이름을 입력해주세요">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이메일(E-mail)<span id="asterisk">*</span></th>
+                                <td>
+                                    <input type="text" name="email" placeholder="예:chorkrecycle@chorokrecycle.com">
+                                    <input type="button" value="중복확인" onclick="check_email()">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>휴대폰<span id="asterisk">*</span></th>
+                                <td>
+                                    <input type="text" name="mobile" placeholder="숫자만 입력해주세요">
+                                    
+                                    <input type="button" value="인증번호 받기" onclick="check_mobile()">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>성별</th>
+                                <td>
+                                    <label>
+                                        <input type="radio" id="male" name="gender" value="male">
+                                        남성
+                                    </label>
+                                    <label>
+                                        <input type="radio" id="female" name="gender" value="female">
+                                        여성
+                                    </label>
+                                    <label>
+                                        <input type="radio" id="none" name="gender" value="none" checked>
+                                        선택 안 함
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr id="birthday_tr">
+                                <th>생년월일</th>
+                                <td>
+                                    <div>
+                                        <input type="text" name="birth_year" placeholder="YYYY">
+                                        <span>/</span>
+                                        <input type="text" name="birth_month" placeholder="MM">
+                                        <span>/</span>
+                                        <input type="text" name="birth_day" placeholder="DD">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
 					</table>
 					<br>
                     <div>

@@ -20,11 +20,7 @@ while(!feof($file)) {
 }
 
 fclose($file);
-unset($file);
-unset($array);
-unset($HOST_INDEX);
-unset($USER_INDEX);
-unset($PASSWORD_INDEX);
+unset($file, $array, $HOST_INDEX, $USER_INDEX, $PASSWORD_INDEX);
 
 $conn = mysqli_connect($server_name, $user_name, $password);
 
