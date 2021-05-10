@@ -1,0 +1,8 @@
+main > div.common-container > div#login_box {
+  width: 231.21px;
+  margin: 0 auto;
+}
+
+main > div.common-container > div#login_box > div#login_title {
+  padding: 20px;
+}

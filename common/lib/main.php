@@ -1,5 +1,5 @@
 <?php
-    include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/conn_db.php";
+    include $_SERVER['DOCUMENT_ROOT']."/common/lib/conn_db.php";
     const COLUMN_MAX = 4;
 
     foreach (array_keys($division_array) as $first_division) {
@@ -25,7 +25,7 @@
                                 $category = $row["category"];
                                 $id = $row["id"];
                                 ?>
-                                <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/product/product.php?id=<?php echo $id;?>&category=<?php echo $category;?>">
+                                <a href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/product/product.php?id=<?php echo $id;?>&category=<?php echo $category;?>">
                                     <img src="<?php echo $link ?>"/>
                                 </a>
                                 <p><?php echo $name ?></p>

@@ -5,27 +5,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include $_SERVER['DOCUMENT_ROOT'] . "/Project_greenRecycle/common/lib/head.php"; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . "/common/lib/head.php"; ?>
     
-    <link rel="stylesheet" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Project_greenRecycle/product/style/product.css?after=11">
-    <script src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Project_greenRecycle/product/js/product.js" defer></script>
+    <link rel="stylesheet" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/product/style/product.css?after=11">
+    <script src="https://<?php echo $_SERVER['HTTP_HOST']; ?>/product/js/product.js" defer></script>
 </head>
 <body>
     <header>
-        <?php include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/header.php";?>
+        <?php include $_SERVER['DOCUMENT_ROOT']."/common/lib/header.php";?>
     </header>
     <nav>
-        <?php include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/nav.php";?>
+        <?php include $_SERVER['DOCUMENT_ROOT']."/common/lib/nav.php";?>
     </nav>
     <main>
         <div class="common-container">
             <section>
                 <?php
                     if (isset($_GET["id"]) == false || isset($_GET["category"]) == false) {
-                        header('Location: '."http://".$_SERVER['HTTP_HOST']."/project_greenrecycle/index.php");
+                        header('Location: '."https://".$_SERVER['HTTP_HOST']."/index.php");
                     }
 
-                    include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/conn_db.php";
+                    include $_SERVER['DOCUMENT_ROOT']."/common/lib/conn_db.php";
 
                     $sql = "SELECT * FROM product_table WHERE id='".$_GET["id"]."' AND category='".$_GET["category"]."'";
                     $result = $conn->query($sql);
@@ -46,7 +46,7 @@
                             }
                         }
                     } else {
-                        header('Location: '."http://".$_SERVER['HTTP_HOST']."/project_greenrecycle/index.php");
+                        header('Location: '."https://".$_SERVER['HTTP_HOST']."/index.php");
                     }
                 ?>
                 <div>
@@ -121,7 +121,7 @@
         </div>
     </main>
     <footer>
-        <?php include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/footer.php";?>
+        <?php include $_SERVER['DOCUMENT_ROOT']."/common/lib/footer.php";?>
     </footer>
 </body>
 </html>

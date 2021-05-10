@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include $_SERVER['DOCUMENT_ROOT'] . "/Project_greenRecycle/common/lib/head.php"; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . "/common/lib/head.php"; ?>
     
-    <link rel="stylesheet" href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Project_greenRecycle/category/style/category.css?after=6">
-    <script src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/Project_greenRecycle/category/js/category.js" defer></script>
+    <link rel="stylesheet" href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/category/style/category.css?after=6">
+    <script src="https://<?php echo $_SERVER['HTTP_HOST']; ?>/category/js/category.js" defer></script>
 </head>
 <body>
     <header>
-        <?php include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/header.php";?>
+        <?php include $_SERVER['DOCUMENT_ROOT']."/common/lib/header.php";?>
     </header>
     <nav>
-        <?php include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/nav.php";?>
+        <?php include $_SERVER['DOCUMENT_ROOT']."/common/lib/nav.php";?>
     </nav>
     <main>
         <div class="common-container">
             <?php
                 if (isset($_GET["category"]) == false) {
-                    header('Location: '."http://".$_SERVER['HTTP_HOST']."/project_greenrecycle/index.php");
+                    header('Location: '."https://".$_SERVER['HTTP_HOST']."/index.php");
                 }
 
                 $sort;
@@ -41,7 +41,7 @@
                         break;
                 }
 
-                include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/conn_db.php";
+                include $_SERVER['DOCUMENT_ROOT']."/common/lib/conn_db.php";
                 
                 $sql = "SELECT * FROM product_table WHERE category='".$_GET["category"]."'".$orderby;
                 $result = $conn->query($sql);
@@ -71,13 +71,13 @@
                 mysqli_close($conn);
             ?>
             <ul>
-                <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/category/category.php?category=<?php echo $_GET["category"]; ?>&sort=<?php echo SORT_DESC_DATE;?>">
+                <a href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/category/category.php?category=<?php echo $_GET["category"]; ?>&sort=<?php echo SORT_DESC_DATE;?>">
                     <li>신상품순</li>
                 </a>
-                <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/category/category.php?category=<?php echo $_GET["category"]; ?>&sort=<?php echo SORT_ASC_PRICE;?>">
+                <a href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/category/category.php?category=<?php echo $_GET["category"]; ?>&sort=<?php echo SORT_ASC_PRICE;?>">
                     <li>낮은 가격순</li>
                 </a>
-                <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/category/category.php?category=<?php echo $_GET["category"]; ?>&sort=<?php echo SORT_DESC_PRICE;?>">
+                <a href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/category/category.php?category=<?php echo $_GET["category"]; ?>&sort=<?php echo SORT_DESC_PRICE;?>">
                     <li>높은 가격순</li>
                 </a>
                 <li>
@@ -97,7 +97,7 @@
                             $category = $row["category"];
                             $id = $row["id"];
                             ?>
-                            <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/product/product.php?id=<?php echo $id;?>&category=<?php echo $category;?>">
+                            <a href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/product/product.php?id=<?php echo $id;?>&category=<?php echo $category;?>">
                                 <img src="<?php echo $link ?>"/>
                             </a>
                             <p><?php echo $name ?></p>
@@ -112,7 +112,7 @@
         </div>
     </main>
     <footer>
-        <?php include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/footer.php";?>
+        <?php include $_SERVER['DOCUMENT_ROOT']."/common/lib/footer.php";?>
     </footer>
 </body>
 </html>

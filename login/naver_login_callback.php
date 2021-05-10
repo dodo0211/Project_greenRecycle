@@ -4,11 +4,11 @@
     // NAVER LOGIN
     define('NAVER_CLIENT_ID', 'nxUB7OJ1tVz_uGQPYbEl');
     define('NAVER_CLIENT_SECRET', 'Za4v3FCTlm');
-    define('NAVER_CALLBACK_URL', 'http://localhost/project_greenrecycle/naver_login_callback.php');
+    define('NAVER_CALLBACK_URL', 'https://'.$_SERVER['HTTP_HOST'].'/login/naver_login_callback.php');
 
     if ($_SESSION['naver_state'] != $_GET['state']) {
         // 불법 요청 로그 남기기
-        header('Location: '."http://".$_SERVER['HTTP_HOST']."/project_greenrecycle/index.php");        
+        header('Location: '."https://".$_SERVER['HTTP_HOST']."/index.php");        
     }
 
     // $naver_curl = "https://nid.naver.com/oauth2.0/token?grant_type=authorization_code&client_id=".NAVER_CLIENT_ID."&client_secret=".NAVER_CLIENT_SECRET."&redirect_uri=".urlencode(NAVER_CALLBACK_URL)."&code=".$_GET['code']."&state=".$_GET['state'];
@@ -54,11 +54,12 @@
 
         $me_responseArr = json_decode($me_response, true);
 
-        include $_SERVER['DOCUMENT_ROOT']."/Project_greenRecycle/common/lib/conn_db.php";
+        include $_SERVER['DOCUMENT_ROOT']."/common/lib/conn_db.php";
 
         // 회원가입 DB에서 회원이 있으면(이미 가입되어 있다면) 토큰을 업데이트하고 로그인 함
-        $sql = "SELECT `id`, `name` FROM member_table WHERE `from`='naver' AND `id`='{$me_responseArr['response']['id']}'";
+        $sql = "SELECT `id`, `name` FROM `member_table` WHERE `from`='naver' AND `id`='{$me_responseArr['response']['id']}'";
         $result = $conn->query($sql);
+        $url = "https://".$_SERVER['HTTP_HOST']."/index.php";
 
         if (is_object($result) && $result->num_rows == 1) {
             echo "<script>alert('{$me_responseArr['response']['id']} 유저 접근 토큰 갱신 시도');</script>";
@@ -66,16 +67,21 @@
         }
         else {
             echo "<script>alert('{$me_responseArr['response']['id']} 유저 db 추가 시도');</script>";
-            // 회원정보가 없다면 회원가입
-            $sql = "INSERT INTO `member_table` VALUES (
-                'naver', 
-                '{$me_responseArr['response']['id']}',
-                '{$me_responseArr['response']['name']}',
-                '{$me_responseArr['response']['gender']}',
-                '{$me_responseArr['response']['mobile']}',
-                '{$me_responseArr['response']['birthyear']}',
-                '{$responseArr['access_token']}',
-                '".date('Y-m-d')."');";
+            // 회원정보가 없다면 회원가입 페이지로 이동
+
+            $register_url = "https://".$_SERVER['HTTP_HOST']."/register/register.php?id={$me_responseArr['response']['id']}&name={$me_responseArr['response']['name']}&gender={$me_responseArr['response']['gender']}&mobile={$me_responseArr['response']['mobile']}&birthyear={$me_responseArr['response']['birthyear']}";
+
+            $url = $register_url;
+
+            // $sql = "INSERT INTO `member_table` VALUES (
+            //     'naver', 
+            //     '{$me_responseArr['response']['id']}',
+            //     '{$me_responseArr['response']['name']}',
+            //     '{$me_responseArr['response']['gender']}',
+            //     '{$me_responseArr['response']['mobile']}',
+            //     '{$me_responseArr['response']['birthyear']}',
+            //     '{$responseArr['access_token']}',
+            //     '".date('Y-m-d')."');";
         }
 
         if (mysqli_query($conn, $sql)) {
@@ -87,27 +93,16 @@
 
         mysqli_close($conn);
 
-        unset($responseArr);
-        unset($me_headers);
-        unset($me_is_post);
-        unset($me_ch);
-        unset($me_response);
-        unset($me_status_code);
-        unset($me_responseArr);
-        unset($sql);
-        unset($result);
+        unset($responseArr, $me_headers, $me_is_post, $me_ch, $me_response, $me_status_code, $me_responseArr, $sql, $result, $register_url);
 
-        header('Location: '."http://".$_SERVER['HTTP_HOST']."/project_greenrecycle/index.php");
+        echo $url;
+        header("Location: {$url}");
     } else {
         echo "<script>
                 alert('status_code({$status_code}) 비정상 접속 시도');
-                window.location = 'http://".$_SERVER['HTTP_HOST']."/project_greenrecycle/index.php';
+                window.location = 'https://".$_SERVER['HTTP_HOST']."/index.php';
             </script>";
     }
 
-    unset($naver_curl);
-    unset($is_post);
-    unset($ch);
-    unset($response);
-    unset($status_code);
+    unset($naver_curl, $is_post, $ch, $response, $status_code);
 ?>

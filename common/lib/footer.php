@@ -16,8 +16,8 @@
 
     </span>
     <span>
-        <a href="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/index.php">
-            <img id="logo" src="http://<?php echo $_SERVER['HTTP_HOST']; ?>/project_greenrecycle/image/logo.jpg" alt="logo image">
+        <a href="https://<?php echo $_SERVER['HTTP_HOST']; ?>/index.php">
+            <img id="logo" src="https://<?php echo $_SERVER['HTTP_HOST']; ?>/image/logo.jpg" alt="logo image">
         </a>
     </span>
 </div>
